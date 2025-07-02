@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import logo from '../assets/logo.png' 
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -35,7 +36,7 @@ function Login() {
   return (
     <div className="login-wrapper">
       <div className="logo-area">
-        <img src="src\assets\logo.png" alt="Site Logo" className="logo-img" />
+        <img src={logo} alt="Site Logo" className="logo-img" />
         <span className="site-name">ShopFront</span>
       </div>
 
