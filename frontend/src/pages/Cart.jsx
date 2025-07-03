@@ -17,6 +17,11 @@ function Cart() {
     setTimeout(() => setShowPopup(false), 4000);
   };
 
+  const logout =() => {
+    localStorage.removeItem('token');
+    navigate('/login') 
+  }
+
   return (
     <>
     <div className='heading'>
@@ -26,7 +31,7 @@ function Cart() {
         </span>
         <nav>
             <span onClick= {() => navigate('/products')}>HOME</span>
-            <span onClick= {() => navigate('/login')}>LOGOUT</span>
+            <span onClick= {logout}>LOGOUT</span>
         </nav>
     </div>
     <div className="cart-container">

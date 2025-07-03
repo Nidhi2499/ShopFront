@@ -24,6 +24,10 @@ function ProductDetail() {
     setShowPopup(true);
     setTimeout(() => setShowPopup(false), 1000);
   }
+  const logout= () => {
+    localStorage.removeItem('token');
+    navigate('/login') 
+  }
 
   return (
     <>
@@ -35,7 +39,7 @@ function ProductDetail() {
       <span><nav>
         <span onClick= {() => navigate('/products')}>HOME</span>
         <span onClick={() => navigate('/cart')}>CART</span>
-        <span onClick= { () => navigate('/login')  }>LOGOUT</span>
+        <span onClick= { logout }>LOGOUT</span>
       </nav></span>
     </div>
     <div className="page-wrapper">
